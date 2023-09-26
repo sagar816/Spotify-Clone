@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+
+/* Full background color change */
+body {
+    background-color: rgb(207, 170, 201)
+}
+
+/*  Saare elements ki margina nd padding zero */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* navigation bar - all font - style change */
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Now we will make ul into a flex box  - display flex karne se horizonally aa jaaenge saare items*/
+
+nav ul{
+    display:flex;
+    list-style-type:none; /* dot and all will not be seen */
+    height: 60px;
+    background-color: black;
+    color: whitesmoke;
+    align-items: center;
+}
+
+/* brand class ki jo image hai, usko chota karna  hai */
+
+.brand img{
+    width: 145px;
+}
+
+/* .brand{
+    display:flex;
+    align-items:center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+} */
+ /* dooriya badhane ke liye paddig de dena hai 10 -12 px left right se */
+
+nav ul li {
+    padding: 0 12px; /*upar niche zero aur aage piche 12 px ki padding */
+}
+
+.container{
+    min-height:60vh;
+    background-color: rgb(16, 106, 241);
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex; /*container ko kardo flex box*/
+    margin:25px auto;
+    width: 70%;
+    border-radius: 15px;
+    padding: 15px;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+.bottom{
+    position: sticky;
+    height: 120px;
+    background-color: black;
+    color:white;
+    bottom: 0;
+    display:flex;
+    justify-content:center;
+    align-items :center;
+    flex-direction: column;
+    
+}
+
+.icons{
+    margin-top: 10px;
+}
+
+.icons i {
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+#myProgressBar{
+    width:80vw;
+    cursor: pointer;
+}
+
+/* to display play list - we need to make cover image small and increase width of song name and duration*/
+/* we use flex- so that if alignmnet is required that we can do that */
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;    
+    border-radius: 40px; 
+}
+
+
+.songItem img{
+    width: 45px;
+    margin: 0 23px;
+    border-radius: 35px;
+}
+
+/* .songName{
+    text-align: left;
+    align-items: left;
+} */
+
+.songItemContainer {
+    margin-top: 50px;
+    
+}
+
+.timeStamp{
+    margin: 0 23px;
+}
+
+.songInfo{
+    position:absolute;
+    left: 9.5vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
